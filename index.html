@@ -125,10 +125,10 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Hiragino Sans','Hiragino Kaku
 <div class="tbar">
   <button class="tb on" onclick="showTab('calc',this)">計算</button>
   <button class="tb" onclick="showTab('palm',this)">手掌法</button>
-  <button class="tb" onclick="showTab('nine',this)">ルールオブナイン</button>
-  <button class="tb" onclick="showTab('lund',this)">ランド・ブラウダー</button>
   <button class="tb" onclick="showTab('depth',this)">熱傷の深度</button>
   <button class="tb" onclick="showTab('bi',this)">BI・予後指数</button>
+  <button class="tb" onclick="showTab('nine',this)">９の法則</button>
+  <button class="tb" onclick="showTab('lund',this)">ランド・ブラウダー</button>
 </div>
 
 <div class="pane on" id="tab-calc">
@@ -242,6 +242,8 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Hiragino Sans','Hiragino Kaku
       <button class="kp-btn" onclick="kpPress('0')">0</button>
       <button class="kp-btn kp-del" onclick="kpDel()">⌫</button>
     </div>
+    <!-- 半分ボタン -->
+    <button class="kp-btn" onclick="kpHalf()" style="width:100%;margin-bottom:4px;font-size:14px;font-weight:600;color:#D85A30;border-color:#D85A30;background:#FFF0EB">½ 半分（最大値の50%）</button>
     <div style="font-size:12px;color:#888780;text-align:right;margin-bottom:14px">手掌法：手掌の個数 ≈ %</div>
 
     <input type="hidden" id="sheet-pct">
@@ -528,6 +530,16 @@ function kpPress(ch){
 
 function kpDel(){
   kpVal = kpVal.slice(0, -1);
+  kpRender();
+}
+
+function kpHalf(){
+  // 現在部位の最大値の半分をセット
+  document.getElementById('sheet-err').style.display = 'none';
+  const max = sheetId ? getPct(sheetId) : 100;
+  const half = Math.round(max / 2 * 100) / 100;
+  // きれいな文字列に変換（例: 4.5 → "4.5"、4.0 → "4"）
+  kpVal = String(half).replace(/\.0+$/, '');
   kpRender();
 }
 
