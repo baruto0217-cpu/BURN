@@ -97,6 +97,15 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Hiragino Sans','Hiragino Kaku
 .dc-t{font-size:15px;font-weight:600;margin-bottom:8px}
 .dc-r{font-size:13px;color:#5F5E5A;line-height:1.7;margin-bottom:3px}
 .dtag{display:inline-block;font-size:12px;padding:3px 10px;border-radius:20px;margin-top:6px;font-weight:600}
+.dfig{padding:12px 12px 10px}
+.dfig-t{font-size:14px;font-weight:600;margin-bottom:6px}
+.dtbl-w{overflow-x:auto;margin-bottom:12px;border:1px solid #E8E6E0;border-radius:12px;background:#fff}
+.dtbl{width:100%;border-collapse:collapse;font-size:12px;line-height:1.5}
+.dtbl th{background:#F5F4F0;color:#5F5E5A;font-weight:600;padding:7px 5px;text-align:left;white-space:nowrap}
+.dtbl td{padding:8px 5px;border-top:1px solid #F1EFE8;vertical-align:top;color:#2C2C2A}
+.dtbl td:first-child{font-weight:700;white-space:nowrap}
+.dmsg{background:#FFF0EB;border:1px solid #F5C4B3;border-radius:12px;padding:12px 14px;margin-bottom:14px;font-size:13px;color:#712B13;line-height:1.65}
+.dmsg-t{font-size:15px;font-weight:700;margin-bottom:2px}
 .bc{border:1px solid #E8E6E0;border-radius:12px;padding:15px;margin-bottom:12px;background:#fff}
 .bt{font-size:15px;font-weight:600;margin-bottom:8px}
 .bd{font-size:13px;color:#5F5E5A;line-height:1.65;margin-bottom:8px}
@@ -279,31 +288,94 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Hiragino Sans','Hiragino Kaku
 
 <div class="pane" id="tab-lund">
   <div class="ih"><div class="ih-n">3</div><div class="ih-t">ランド・ブラウダー法</div><div class="ih-d">年齢によって頭部と下肢の割合が変わる補正を加えた方法です。特に10歳未満の小児ではルールオブナインでは誤差が生じます。</div><span class="ih-tag">小児に必須・成人にも高精度</span></div>
-  <div class="nb" style="margin-bottom:12px">頭部（A）は成長とともに全体比が下がり（0歳9.5%→成人3.5%）、大腿（B）と下腿（C）が占める割合が上がります。計算タブで年齢スライダーを動かすと自動補正されます。</div>
+  <div class="nb" style="margin-bottom:12px">頭部は成長とともに全体比が下がり（0歳19%→成人7%）、大腿と下腿が占める割合が上がります。A・B・Cは標準チャートの「半分値」（A＝頭部の半分、B＝片側大腿の半分、C＝片側下腿の半分）で、下の表は部位全体の%で示しています。計算タブで年齢スライダーを動かすと自動補正されます。</div>
   <div style="font-size:11px;color:#888780;margin-bottom:10px">出典：Lund CC, Browder NC. Surg Gynecol Obstet 1944;79:352-358</div>
   <div class="lw"><table class="lt">
     <tr><th>部位</th><th>0歳</th><th>1歳</th><th>5歳</th><th>10歳</th><th>15歳</th><th>成人</th></tr>
-    <tr><td>頭部(A)</td><td class="lh">9.5</td><td class="lh">8.5</td><td class="lh">6.5</td><td class="lh">5.5</td><td class="lh">4.5</td><td>3.5</td></tr>
-    <tr><td>頸部</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td></tr>
-    <tr><td>体幹前面</td><td>13</td><td>13</td><td>13</td><td>13</td><td>13</td><td>13</td></tr>
-    <tr><td>体幹後面</td><td>13</td><td>13</td><td>13</td><td>13</td><td>13</td><td>13</td></tr>
+    <tr><td>頭部(2A)</td><td class="lh">19</td><td class="lh">17</td><td class="lh">13</td><td class="lh">11</td><td class="lh">9</td><td>7</td></tr>
+    <tr><td>頸部</td><td>2</td><td>2</td><td>2</td><td>2</td><td>2</td><td>2</td></tr>
+    <tr><td>体幹前面（胸・腹）</td><td>13</td><td>13</td><td>13</td><td>13</td><td>13</td><td>13</td></tr>
+    <tr><td>体幹後面（背）</td><td>13</td><td>13</td><td>13</td><td>13</td><td>13</td><td>13</td></tr>
+    <tr><td>臀部（左右計）</td><td>5</td><td>5</td><td>5</td><td>5</td><td>5</td><td>5</td></tr>
+    <tr><td>会陰部（外陰部）</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td></tr>
     <tr><td>上腕（片側）</td><td>4</td><td>4</td><td>4</td><td>4</td><td>4</td><td>4</td></tr>
     <tr><td>前腕（片側）</td><td>3</td><td>3</td><td>3</td><td>3</td><td>3</td><td>3</td></tr>
     <tr><td>手（片側）</td><td>2.5</td><td>2.5</td><td>2.5</td><td>2.5</td><td>2.5</td><td>2.5</td></tr>
-    <tr><td>大腿(B)（片側）</td><td class="lh">2.75</td><td class="lh">3.25</td><td class="lh">4</td><td class="lh">4.25</td><td class="lh">4.5</td><td>4.75</td></tr>
-    <tr><td>下腿(C)（片側）</td><td class="lh">2.5</td><td class="lh">2.5</td><td class="lh">2.75</td><td class="lh">3</td><td class="lh">3.25</td><td>3.5</td></tr>
+    <tr><td>大腿(2B)（片側）</td><td class="lh">5.5</td><td class="lh">6.5</td><td class="lh">8</td><td class="lh">8.5</td><td class="lh">9</td><td>9.5</td></tr>
+    <tr><td>下腿(2C)（片側）</td><td class="lh">5</td><td class="lh">5</td><td class="lh">5.5</td><td class="lh">6</td><td class="lh">6.5</td><td>7</td></tr>
     <tr><td>足（片側）</td><td>3.5</td><td>3.5</td><td>3.5</td><td>3.5</td><td>3.5</td><td>3.5</td></tr>
-    <tr><td>会陰部</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td></tr>
     <tr style="font-weight:700;background:#F5F4F0"><td>合計</td><td>100</td><td>100</td><td>100</td><td>100</td><td>100</td><td>100</td></tr>
   </table></div>
+  <div class="nb" style="margin-top:12px">計算タブの人体図の区分に合わせ、体幹前面13%は胸・腹を6.5%ずつ、体幹後面13%は上背6.5%と腰背部（下背部6.5%＋臀部5%＝11.5%）に分けています。この内訳は便宜上の按分で、標準チャートの規定値ではありません。年齢の間は直線で補間します。</div>
 </div>
 
 <div class="pane" id="tab-depth">
-  <img src="data:image/png;base64,__BASE64_IMAGE_DATA_OMITTED_FOR_DISPLAY__">
-  <div class="dc" style="border-top-color:#EF9F27"><div class="dc-t" style="color:#BA7517">Ⅰ度（表皮熱傷）</div><div class="dc-r"><strong>深さ：</strong>表皮のみの損傷</div><div class="dc-r"><strong>症状：</strong>発赤・疼痛・熱感。水疱は形成されない。</div><div class="dc-r"><strong>治癒：</strong>3〜5日で瘢痕なく治癒。</div><div class="dc-r"><strong>治療：</strong>冷却・保湿ケアが中心。植皮は不要。</div><div class="dc-r"><strong>TBSA：</strong>Ⅰ度はTBSAに算入しない（参考値として表示）。</div><span class="dtag" style="background:#FAEEDA;color:#854F0B">瘢痕なし</span></div>
-  <div class="dc" style="border-top-color:#D85A30"><div class="dc-t" style="color:#993C1D">Ⅱ度浅達性（SDB）</div><div class="dc-r"><strong>深さ：</strong>真皮浅層まで</div><div class="dc-r"><strong>症状：</strong>水疱形成・強い疼痛・ピンク色の創面。</div><div class="dc-r"><strong>治癒：</strong>1〜2週間で治癒。軽度の色素沈着。</div><div class="dc-r"><strong>治療：</strong>保存的治療。水疱の管理が重要。</div><span class="dtag" style="background:#FAECE7;color:#712B13">保存的治療</span></div>
-  <div class="dc" style="border-top-color:#993C1D"><div class="dc-t" style="color:#712B13">Ⅱ度深達性（DDB）</div><div class="dc-r"><strong>深さ：</strong>真皮深層まで</div><div class="dc-r"><strong>症状：</strong>水疱・知覚低下・白色〜赤色の創面。</div><div class="dc-r"><strong>治癒：</strong>3〜4週間以上。瘢痕形成あり。</div><div class="dc-r"><strong>治療：</strong>植皮術が必要になることが多い。</div><span class="dtag" style="background:#FAECE7;color:#712B13">植皮検討</span></div>
-  <div class="dc" style="border-top-color:#501313"><div class="dc-t" style="color:#501313">Ⅲ度（全層熱傷）</div><div class="dc-r"><strong>深さ：</strong>皮膚全層〜皮下組織</div><div class="dc-r"><strong>症状：</strong>無痛（神経破壊）・白色〜黒色の革様皮膚。</div><div class="dc-r"><strong>治癒：</strong>自然治癒は困難。必ず植皮が必要。</div><div class="dc-r"><strong>治療：</strong>壊死組織の除去と植皮術。ICU管理。</div><span class="dtag" style="background:#FCEBEB;color:#791F1F">植皮必須</span></div>
+  <div class="card dfig">
+    <div class="dfig-t">熱傷の深さと皮膚の構造</div>
+    <svg viewBox="0 0 340 258" role="img" aria-label="皮膚の断面図。Ⅰ度は表皮まで、浅達性Ⅱ度は真皮の浅い層まで、深達性Ⅱ度は真皮の深い層まで、Ⅲ度は皮膚の全層に及び、皮下組織に及ぶこともある" style="width:100%;height:auto;display:block">
+      <!-- 層 -->
+      <rect x="62" y="44" width="274" height="16" fill="#F6D3C2"/>
+      <rect x="62" y="60" width="274" height="44" fill="#F3BFA8"/>
+      <rect x="62" y="104" width="274" height="60" fill="#EBA88E"/>
+      <rect x="62" y="164" width="274" height="58" fill="#FBE9B7"/>
+      <g fill="#F7DC94" opacity=".9"><circle cx="80" cy="190" r="11"/><circle cx="104" cy="200" r="10"/><circle cx="170" cy="186" r="10"/><circle cx="215" cy="203" r="11"/><circle cx="300" cy="190" r="12"/><circle cx="325" cy="206" r="9"/></g>
+      <g stroke="#FFFFFF" stroke-width="1" opacity=".8"><line x1="62" y1="60" x2="336" y2="60"/></g>
+      <g stroke="#B9775F" stroke-width="1" stroke-dasharray="3 3"><line x1="62" y1="104" x2="336" y2="104"/></g>
+      <line x1="62" y1="164" x2="336" y2="164" stroke="#B9775F" stroke-width="1"/>
+      <!-- 毛包・汗腺・血管 -->
+      <path d="M130 10 L132 44 M130 44 L130 150" stroke="#4A3B33" stroke-width="2" fill="none"/>
+      <ellipse cx="130" cy="152" rx="6" ry="8" fill="#6B4E3D"/>
+      <path d="M250 44 L250 140 q-8 4 0 8 q8 4 0 8 q-8 4 0 8" stroke="#5B8DB8" stroke-width="2" fill="none"/>
+      <path d="M190 164 q10 -18 20 0 M270 164 q10 -22 20 0" stroke="#C0392B" stroke-width="1.5" fill="none"/>
+      <!-- 左ラベル -->
+      <g font-size="10" fill="#2C2C2A" text-anchor="end">
+        <text x="56" y="56">表皮</text>
+        <text x="56" y="80">真皮</text><text x="56" y="92" font-size="9" fill="#5F5E5A">（浅層）</text>
+        <text x="56" y="132">真皮</text><text x="56" y="144" font-size="9" fill="#5F5E5A">（深層）</text>
+        <text x="56" y="196">皮下組織</text>
+      </g>
+      <!-- 深さの帯 -->
+      <g opacity=".88">
+        <rect x="82" y="44" width="34" height="16" rx="3" fill="#EF9F27"/>
+        <rect x="146" y="44" width="34" height="38" rx="3" fill="#D85A30"/>
+        <rect x="200" y="44" width="34" height="112" rx="3" fill="#993C1D"/>
+        <rect x="270" y="44" width="34" height="120" rx="3" fill="#501313"/>
+        <rect x="271" y="164" width="32" height="14" rx="3" fill="none" stroke="#501313" stroke-width="1.2" stroke-dasharray="3 2"/>
+      </g>
+      <!-- 上ラベル -->
+      <g font-size="11" font-weight="700" text-anchor="middle">
+        <text x="99" y="36" fill="#BA7517">Ⅰ度</text>
+        <text x="163" y="22" fill="#993C1D">浅達性</text><text x="163" y="36" fill="#993C1D">Ⅱ度</text>
+        <text x="217" y="22" fill="#712B13">深達性</text><text x="217" y="36" fill="#712B13">Ⅱ度</text>
+        <text x="287" y="36" fill="#501313">Ⅲ度</text>
+      </g>
+      <!-- 凡例 -->
+      <g font-size="9" fill="#5F5E5A">
+        <line x1="66" y1="249" x2="78" y2="249" stroke="#4A3B33" stroke-width="2"/><text x="81" y="252">毛包</text>
+        <line x1="112" y1="249" x2="124" y2="249" stroke="#5B8DB8" stroke-width="2"/><text x="127" y="252">汗腺</text>
+        <line x1="158" y1="249" x2="170" y2="249" stroke="#C0392B" stroke-width="1.5"/><text x="173" y="252">血管</text>
+        <text x="66" y="235">帯＝損傷が届く深さ（点線は及ぶことがある範囲）</text>
+      </g>
+    </svg>
+    <div class="fn">生き残った毛包・汗腺などがあれば、そこから表面の皮膚（上皮）が再生します。深い損傷ほど治りに時間がかかり、瘢痕（傷あと）を残しやすくなります。</div>
+  </div>
+
+  <div class="sh">見分け方の目安</div>
+  <div class="dtbl-w"><table class="dtbl">
+    <tr><th>深度</th><th>見た目</th><th>水疱</th><th>痛み</th><th>押したとき</th></tr>
+    <tr><td style="color:#BA7517">Ⅰ度</td><td>赤い（発赤）</td><td>なし</td><td>あり</td><td>白くなり、すぐ赤みが戻る</td></tr>
+    <tr><td style="color:#993C1D">浅達性<br>Ⅱ度</td><td>水疱の底が赤〜ピンク色</td><td>あり</td><td>強い</td><td>白くなり、すぐ赤みが戻る</td></tr>
+    <tr><td style="color:#712B13">深達性<br>Ⅱ度</td><td>水疱の底が白っぽい・まだら</td><td>あり</td><td>鈍い</td><td>白くなりにくい／ならない</td></tr>
+    <tr><td style="color:#501313">Ⅲ度</td><td>白・褐色・黒色、硬く革のよう</td><td>なし</td><td>ない※</td><td>色が変わらない</td></tr>
+  </table></div>
+  <div class="fn" style="margin:-6px 0 12px">所見を組み合わせて推定する目安です。水疱がまだできていない・破れていることや、深さが混在することもあります。深さを確かめるために水疱を破らないでください。※Ⅲ度でも周囲の浅い部分は痛むことがあります。</div>
+
+  <div class="dmsg"><div class="dmsg-t">熱傷は受傷後に深くなることがあります</div>受傷早期は、とくにⅡ度の深さの判定が難しく、時間をおいた再評価が必要です。迷うときは深い熱傷の可能性を考え、推定した深度と「判定に迷った」ことを記録・申し送ります。</div>
+  <div class="dc" style="border-top-color:#EF9F27"><div class="dc-t" style="color:#BA7517">Ⅰ度（表皮熱傷）</div><div class="dc-r"><strong>深さ：</strong>表皮のみの損傷</div><div class="dc-r"><strong>症状：</strong>発赤・疼痛・熱感。水疱は形成されない。</div><div class="dc-r"><strong>治癒：</strong>通常、数日で瘢痕を残さず治る。</div><div class="dc-r"><strong>医療機関での治療：</strong>冷却・保湿などの保存的治療。植皮は不要。</div><div class="dc-r"><strong>面積：</strong>熱傷面積（%TBSA）はⅡ度・Ⅲ度の合計で、Ⅰ度は含めない（Ⅰ度は参考として別表示）。</div><span class="dtag" style="background:#FAEEDA;color:#854F0B">瘢痕なし</span></div>
+  <div class="dc" style="border-top-color:#D85A30"><div class="dc-t" style="color:#993C1D">Ⅱ度浅達性（SDB）</div><div class="dc-r"><strong>深さ：</strong>真皮浅層まで</div><div class="dc-r"><strong>症状：</strong>水疱形成・強い疼痛・ピンク色の創面。</div><div class="dc-r"><strong>治癒：</strong>通常1〜2週間程度で上皮化。色素の変化を残すことがある。</div><div class="dc-r"><strong>医療機関での治療：</strong>保存的治療が中心（水疱の扱いは部位や状態で判断）。</div><span class="dtag" style="background:#FAECE7;color:#712B13">保存的治療</span></div>
+  <div class="dc" style="border-top-color:#993C1D"><div class="dc-t" style="color:#712B13">Ⅱ度深達性（DDB）</div><div class="dc-r"><strong>深さ：</strong>真皮深層まで</div><div class="dc-r"><strong>症状：</strong>水疱・知覚の低下・白っぽい〜まだらな創面。</div><div class="dc-r"><strong>治癒：</strong>上皮化に3〜4週間以上かかることが多く、瘢痕・拘縮を残しやすい。</div><div class="dc-r"><strong>医療機関での治療：</strong>植皮術などの外科的治療が検討されることが多い。</div><span class="dtag" style="background:#FAECE7;color:#712B13">植皮検討</span></div>
+  <div class="dc" style="border-top-color:#501313"><div class="dc-t" style="color:#501313">Ⅲ度（全層熱傷）</div><div class="dc-r"><strong>深さ：</strong>表皮・真皮の全層（皮下組織に及ぶこともある）</div><div class="dc-r"><strong>症状：</strong>創面は無痛（神経の破壊）。白色・褐色〜黒色の硬い革のような皮膚。周囲は痛むことがある。</div><div class="dc-r"><strong>治癒：</strong>自然には治りにくい（小範囲なら周囲から治ることもある）。</div><div class="dc-r"><strong>医療機関での治療：</strong>一般に壊死組織の除去と植皮などの外科的治療を検討。集中治療の要否は面積・気道損傷・全身状態などで判断。</div><span class="dtag" style="background:#FCEBEB;color:#791F1F">外科的治療を検討</span></div>
+  <div class="fn">出典：日本皮膚科学会「創傷・褥瘡・熱傷ガイドライン（2023）―6 熱傷診療ガイドライン（第3版）」、日本熱傷学会「熱傷診療ガイドライン〔改訂第3版〕」（2021）をもとに作成。図は模式図です。教育・訓練用の目安であり、診断に代わるものではありません。</div>
 </div>
 
 <div class="pane" id="tab-bi">
@@ -397,30 +469,32 @@ function setMeth(m){
   document.getElementById('guide-palm').style.display=m==='palm'?'':'none';
   refreshFig(); calc();
 }
-// ── ランド・ブラウダー法（正式値）──
+// ── ランド・ブラウダー法 ──
 // 出典: Lund CC, Browder NC. Surg Gynecol Obstet 1944;79:352-358
 // 各年齢チェックポイント間は線形補間
 const LB_TABLE = {
-  head:        [9.5,  8.5,  6.5,  5.5,  4.5,  3.5],
-  neck:        [1,    1,    1,    1,    1,    1  ],
-  chest:       [13,   13,   13,   13,   13,   13 ],
-  abdomen:     [13,   13,   13,   13,   13,   13 ],
-  upper_back:  [13,   13,   13,   13,   13,   13 ],
-  lower_back:  [13,   13,   13,   13,   13,   13 ],
-  perineum:    [1,    1,    1,    1,    1,    1  ],
-  r_upper_arm: [4,    4,    4,    4,    4,    4  ],
-  l_upper_arm: [4,    4,    4,    4,    4,    4  ],
-  r_forearm:   [3,    3,    3,    3,    3,    3  ],
-  l_forearm:   [3,    3,    3,    3,    3,    3  ],
-  r_hand:      [2.5,  2.5,  2.5,  2.5,  2.5,  2.5],
-  l_hand:      [2.5,  2.5,  2.5,  2.5,  2.5,  2.5],
-  r_thigh:     [2.75, 3.25, 4.0,  4.25, 4.5,  4.75],
-  l_thigh:     [2.75, 3.25, 4.0,  4.25, 4.5,  4.75],
-  r_leg:       [2.5,  2.5,  2.75, 3.0,  3.25, 3.5 ],
-  l_leg:       [2.5,  2.5,  2.75, 3.0,  3.25, 3.5 ],
+  head:        [19,   17,   13,   11,   9,    7   ],
+  neck:        [2,    2,    2,    2,    2,    2   ],
+  chest:       [6.5,  6.5,  6.5,  6.5,  6.5,  6.5 ],
+  abdomen:     [6.5,  6.5,  6.5,  6.5,  6.5,  6.5 ],
+  upper_back:  [6.5,  6.5,  6.5,  6.5,  6.5,  6.5 ],
+  lower_back:  [11.5, 11.5, 11.5, 11.5, 11.5, 11.5],
+  perineum:    [1,    1,    1,    1,    1,    1   ],
+  r_upper_arm: [4,    4,    4,    4,    4,    4   ],
+  l_upper_arm: [4,    4,    4,    4,    4,    4   ],
+  r_forearm:   [3,    3,    3,    3,    3,    3   ],
+  l_forearm:   [3,    3,    3,    3,    3,    3   ],
+  r_hand:      [2.5,  2.5,  2.5,  2.5,  2.5,  2.5 ],
+  l_hand:      [2.5,  2.5,  2.5,  2.5,  2.5,  2.5 ],
+  r_thigh:     [5.5,  6.5,  8,    8.5,  9,    9.5 ],
+  l_thigh:     [5.5,  6.5,  8,    8.5,  9,    9.5 ],
+  r_leg:       [5,    5,    5.5,  6,    6.5,  7   ],
+  l_leg:       [5,    5,    5.5,  6,    6.5,  7   ],
   r_foot:      [3.5,  3.5,  3.5,  3.5,  3.5,  3.5 ],
   l_foot:      [3.5,  3.5,  3.5,  3.5,  3.5,  3.5 ],
 };
+// 注: 値は「部位全体」の%。標準チャートのA(頭)・B(大腿)・C(下腿)は半分値なので2倍して格納
+//     体幹は前面13+後面13。胸・腹=前面を半分ずつ、上背=後面の半分、腰背部=後面の半分+臀部(2.5×2)
 // チェックポイント年齢
 const LB_AGES = [0, 1, 5, 10, 15, 18];
 
